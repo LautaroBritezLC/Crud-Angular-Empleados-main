@@ -1,0 +1,30 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">Listado de libros</span>
+              <button class="float-right" routerLink="/create-libro">Agregar</button>
+            <h5 style="margin-top: 30px;" *ngIf="libros.length == 0">No hay datos para mostrar</h5>
+            <table *ngIf="libros.length > 0" class="table table-striped mt-5">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>autor </th>
+                    <th>edición</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let libro of libros">
+                    <td>{{ libro.nombre }}</td>
+                    <td>{{ libro.autor }}</td>
+                    <td>{{ libro.edicion }}</td>
+                    <td>
+                      <i class="fas fa-edit fa-lg text-warning mr-2" [routerLink]="['/editLibro/', libro.id]"></i>
+                      <i (click)="eliminarLibro(libro.id)" class="fas fa-trash-alt fa-lg text-danger"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

@@ -10,17 +10,15 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Componente
 import { AppComponent } from './app.component';
-import { ListEmpleadosComponent } from './components/list-empleados/list-empleados.component';
-import { CreateEmpleadoComponent } from './components/create-empleado/create-empleado.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { environment } from 'src/environments/environment';
+import { ListaLibrosComponent } from './components/lista-libros/lista-libros.component';
+import { CreateLibroComponent } from './components/create-libro/create-libro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListEmpleadosComponent,
-    CreateEmpleadoComponent,
-    NavbarComponent,
+    ListaLibrosComponent,
+    CreateLibroComponent,
   ],
   imports: [
     BrowserModule,

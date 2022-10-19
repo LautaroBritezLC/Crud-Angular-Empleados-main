@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CreateEmpleadoComponent } from './components/create-empleado/create-empleado.component';
-import { ListEmpleadosComponent } from './components/list-empleados/list-empleados.component';
+import { CreateLibroComponent } from './components/create-libro/create-libro.component';
+import { ListaLibrosComponent } from './components/lista-libros/lista-libros.component';
+
 
 const routes: Routes = [
-  { path: '', redirectTo: 'list-empleados', pathMatch: 'full' },
-  { path: 'list-empleados', component: ListEmpleadosComponent },
-  { path: 'create-empleado', component: CreateEmpleadoComponent },
-  { path: 'editEmpleado/:id', component: CreateEmpleadoComponent },
-  { path: '**', redirectTo: 'list-empleados', pathMatch: 'full' },
+  { path: '', redirectTo: 'lista-libros', pathMatch: 'full' },
+  { path: 'lista-libros', component: ListaLibrosComponent },
+  { path: 'create-libro', component: CreateLibroComponent },
+  { path: 'editLibro/:id', component: CreateLibroComponent },
+  { path: '**', redirectTo: 'lista-libros', pathMatch: 'full' },
 ];
 
 @NgModule({
